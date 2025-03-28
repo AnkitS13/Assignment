@@ -1,0 +1,35 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environment directories
+.venv/
+venv/
+env/
+
+# Ignore logs
+*.log
+chat_logs.txt
+
+# Ignore system files
+.DS_Store
+
+# Ignore environment files
+.env
+
+# Ignore temporary and backup files
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# Ignore test directories
+tests/
+
+# (Optional) Exclude IDE configuration files (e.g., VSCode, PyCharm)
+.vscode/
+.idea/
+*.iml
+
+chroma_db/

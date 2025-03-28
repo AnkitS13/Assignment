@@ -1,0 +1,321 @@
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+  .chat-bubble {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    background-color: #7161EF;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .chat-bubble:hover {
+    transform: scale(1.1);
+  }
+
+  .chat-bubble.opening {
+    animation: slideIn 0.6s forwards;
+  }
+  
+  .chat-bubble.closing {
+    animation: slideIn 0.5s forwards;
+  }
+  
+
+
+
+  .chat-box {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 300px;
+    height: 400px; /* Set a fixed height */
+    max-height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    animation: openChat 0.3s ease-out;
+  }
+
+  .chat-box.closing {
+    animation: closeChat 0.3s ease-out forwards; /* Closing animation */
+  }
+  
+  .chat-header {
+    font-weight: bold;
+    padding: 5px;
+    background-color: #7161EF;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 40px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+
+  .chat-messages {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .chat-messages::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+  }
+  
+  
+  .message {
+    max-width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 15px;
+    font-size: 14px;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+  }
+  
+  .user {
+    background-color: #7161EF;
+    color: #fffdfd;
+    align-self: flex-end;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    max-width: 70%;
+    margin-left: auto;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: fit-content;
+    width: fit-content;
+    padding: 5px 10px;
+    
+  }
+  
+  .bot {
+    background-color: #f1f1f1;
+    color: #000;
+    align-self: flex-start;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    max-width: 70%;
+    padding: 2px 8px;
+
+  }
+  
+  .typing {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .typing span {
+    font-size: 18px;
+    margin: 0 2px;
+    animation: typing 1.5s infinite;
+  }
+  
+  .typing span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .typing span:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
+  .typing span:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes typing {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .chat-input {
+    display: flex;
+    padding-top: 10px;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+
+  .chat-input input:focus {
+    border-color: #7161EF; /* Set a custom border color */
+    box-shadow: 0 0 5px rgba(113, 97, 239, 0.5); /* Optional: Add a glow effect */
+  }
+  
+  .chat-input .send-button {
+    background-color: #7161EF;;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .chat-input button:hover {
+    background-color: #b0a8e9;
+  }
+
+  .chat-input .send-button:hover {
+    background-color: #8c80e3;
+  }
+  
+  .chat-input .send-button svg {
+    font-size: 16px;
+  }
+
+  .message a {
+    color: #1e90ff; /* Set link color */
+    text-decoration: underline; /* Underline links */
+    word-wrap: break-word; /* Ensure long links are properly wrapped */
+  }
+
+  @keyframes openChat {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes closeChat {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+    to {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+  }
+  
+ /* Typing Indicator Bubbles */
+.typing {
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    color: #7161EF;
+    font-weight: bold;
+    font-style: italic;
+    white-space: nowrap;
+    margin-left: 10px;
+  }
+  
+  .typing span {
+    opacity: 0;
+    animation: typingBubble 1.5s infinite;
+  }
+  
+  .typing span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .typing span:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
+  .typing span:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  /* Keyframe animation for typing bubbles */
+  @keyframes typingBubble {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  
+  .chat-box.closing {
+  animation: slideOut 0.3s forwards, fadeOut 0.3s forwards;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+  
