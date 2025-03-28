@@ -33,6 +33,16 @@ This project is designed to function as an AI-powered support agent for **Nebula
    ```bash
    pip install -r requirements.txt
    ```
+## Run the commands:
+1. For Frontend:
+   ```bash
+   npm run dev
+   ```
+2. For Backend:
+   ```bash
+   fastapi dev main.py
+   ```
+   
 
 ## Usage
 - The assistant processes queries and classifies intent using the `intent_classification_prompt`.
