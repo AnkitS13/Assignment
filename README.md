@@ -33,7 +33,7 @@ This project is designed to function as an AI-powered support agent for **Nebula
    ```bash
    pip install -r requirements.txt
    ```
-## Run the commands:
+## Commands:
 1. For Frontend:
    ```bash
    npm run dev
