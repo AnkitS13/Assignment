@@ -44,5 +44,6 @@ This project is designed to function as an AI-powered support agent for **Nebula
 - `openai`
 - `python-dotenv`
 
-## Contact
-For any issues or contributions, feel free to reach out to **Ankit Singh** or raise an issue in the repository.
+![Screenshot_Assignment](https://github.com/user-attachments/assets/436b943e-e4bd-40c7-8d87-4cf60e376ff2)
+**Sreenshot of my project**
+
