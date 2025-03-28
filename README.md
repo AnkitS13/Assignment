@@ -47,5 +47,5 @@ This project is designed to function as an AI-powered support agent for **Nebula
 
 ## Screenshot
 ![Screenshot_Assignment](https://github.com/user-attachments/assets/436b943e-e4bd-40c7-8d87-4cf60e376ff2)
-**Fig1**
+**Figure-1**
 
